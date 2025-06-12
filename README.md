@@ -28,7 +28,7 @@
 ## Installation
 
 ```
-npm install webp-converter
+npm install convert2webp
 ```
 
 ## Getting Started

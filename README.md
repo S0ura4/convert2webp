@@ -304,4 +304,3 @@ $ npm install convert2webp
 
   [MIT](LICENSE)
 # convert2webp
-# convert2webp

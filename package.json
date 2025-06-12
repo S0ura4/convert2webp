@@ -1,7 +1,7 @@
 {
   "name": "convert2webp",
   "version": "2.1.0",
-  "description": "A small node.js library for converting any image to webp file format or converting webp image to any image file format.",
+  "description": "**A modern and robust Node.js library for converting images to and from the WebP format. This library is a wrapper around Google's pre-compiled** **cwebp**, **dwebp**, **gwebp**, and **webpmux** **command-line utilities**.",
   "main": "src/webpconverter.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,12 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/S0ura4/convert2webp.git"
   },
   "keywords": [
     "webp",
     "webpconverter",
     "webp-converter",
+    "convert2webp",
+    "image-conversion",
+    "image-converter-webp",
+    "image-converter",
     "cwebp",
     "dwebp",
     "gif2webp",

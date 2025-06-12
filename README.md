@@ -1,4 +1,4 @@
-### WebP Converter.
+### Webpify any image.
 
 #### Thanks for all your support!
 
@@ -28,7 +28,7 @@
 ## Installation
 
 ```
-npm install convert2webp
+npm install img-webpify
 ```
 
 ## Getting Started
@@ -297,7 +297,7 @@ result.then((response) => {
 ## Installation
 
 ```bash
-$ npm install convert2webp
+$ npm install img-webpify
 ```
 
 ## License

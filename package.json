@@ -1,5 +1,5 @@
 {
-  "name": "convert2webp",
+  "name": "img-webpify",
   "version": "2.1.0",
   "description": "A modern and robust Node.js library for converting images to and from the WebP format. This library is a wrapper around Google's pre-compiled cwebp, dwebp, gwebp, and webpmux command-line utilities.",
   "main": "src/webpconverter.js",

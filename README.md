@@ -1,39 +1,50 @@
-### This repo is no longer supported.
+### WebP Converter.
 
 #### Thanks for all your support!
 
 [![webp-converter Logo](images/nlogo.gif)](https://www.npmjs.com/package/webp-converter)
 
-A small [node.js](http://nodejs.org) library for converting any image to webp file format or converting webp image to any image file format.
+**A modern and robust Node.js library for converting images to and from the WebP format. This library is a wrapper around Google's pre-compiled** **cwebp**, **dwebp**, **gwebp**, and **webpmux** **command-line utilities (v1.1.0 or higher).**
 
-This library uses precompiled executables of WebP(v1.1.0) for more info visit [WebP](https://developers.google.com/speed/webp)
+**For detailed information on the underlying tools, please visit the official WebP documentation:**
 
-For converting other image formats to webp, please read this documentation  [cwebp Encoder](https://developers.google.com/speed/webp/docs/cwebp)
+* [cwebp Encoder](https://www.google.com/url?sa=E&q=https%3A%2F%2Fdevelopers.google.com%2Fspeed%2Fwebp%2Fdocs%2Fcwebp) **(for encoding images to WebP)**
+* [dwebp Decoder](https://www.google.com/url?sa=E&q=https%3A%2F%2Fdevelopers.google.com%2Fspeed%2Fwebp%2Fdocs%2Fdwebp) **(for decoding WebP to other formats)**
+* [gif2webp Converter](https://www.google.com/url?sa=E&q=https%3A%2F%2Fdevelopers.google.com%2Fspeed%2Fwebp%2Fdocs%2Fgif2webp) **(for encoding GIFs to animated WebP)**
+* [webpmux Muxer](https://www.google.com/url?sa=E&q=https%3A%2F%2Fdevelopers.google.com%2Fspeed%2Fwebp%2Fdocs%2Fwebpmux) **(for creating animations and managing metadata)**
 
-For converting webp image to other image format, please read this documentation  [dwebp Encoder](https://developers.google.com/speed/webp/docs/dwebp)
+## What's New in Version 2.0+
 
-For converting gif image to webp, please read this documentation [gif2webp Converter](https://developers.google.com/speed/webp/docs/gif2webp)
+**This library has been completely modernized from the ground up to meet current development standards.**
 
-For creating animated webp image using webp images, please read this documentation [webpmux Muxer](https://developers.google.com/speed/webp/docs/webpmux)
-
-## What's New
-
-* logging options added
+* **Modern Asynchronous API:** **All methods now return Promises and fully support** **async/await** **for cleaner, more readable code.**
+* **Proper Error Handling:** **Failed operations now correctly** **reject** **the promise, allowing for standard** **try...catch** **error handling.**
+* **Secure and Efficient:** **Uses** **child_process.execFile** **instead of** **exec**, which is safer and more performant.
+* **Reliable Temp File Management:** **Guarantees that temporary files created during buffer/base64 conversions are always cleaned up, even if an error occurs.**
+* **Cross-Platform Support:** **Ships with pre-compiled binaries for Linux (x64), macOS (x64/arm64), and Windows (x64).**
 
 # How to use
 
-## Fix Permission Issue
-
-```js
-
-const webp=require('webp-converter');
-
-// this will grant 755 permission to webp executables
-webp.grant_permission();
+## Installation
 
 ```
+npm install webp-converter
+```
 
-# cwebp
+## Getting Started
+
+**All functions return a Promise, so it's highly recommended to use** **async/await**.
+
+### Fix Permission Issues (Linux & macOS)
+
+**On non-Windows systems, you must grant execute permissions to the WebP binaries. This only needs to be done once.**
+
+```
+const webp = require('webp-converter');
+
+// This will grant 755 permission to the webp executables
+webp.grant_permission();
+```
 
 ## Convert other image format to webp
 
@@ -50,7 +61,6 @@ const result = webp.cwebp("nodejs_logo.jpg","nodejs_logo.webp","-q 80",logging="
 result.then((response) => {
   	console.log(response);
   });
-
 
 ```
 

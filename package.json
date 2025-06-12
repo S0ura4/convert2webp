@@ -1,7 +1,7 @@
 {
   "name": "convert2webp",
   "version": "2.1.0",
-  "description": "**A modern and robust Node.js library for converting images to and from the WebP format. This library is a wrapper around Google's pre-compiled** **cwebp**, **dwebp**, **gwebp**, and **webpmux** **command-line utilities**.",
+  "description": "A modern and robust Node.js library for converting images to and from the WebP format. This library is a wrapper around Google's pre-compiled cwebp, dwebp, gwebp, and webpmux command-line utilities.",
   "main": "src/webpconverter.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/S0ura4/convert2webp.git"
+    "url": "git+https://github.com/S0ura4/convert2webp.git"
   },
   "keywords": [
     "webp",
@@ -28,7 +28,7 @@
     "LICENSE",
     "README.md",
     "app.js",
-    "webpconverter.js",
+    "src/webpconverter.js",
     "src/buffer_utils.js",
     "src/temp_path.js",
     "src/cwebp.js",
@@ -42,6 +42,10 @@
   "dependencies": {
     "uuid": "^11.1.0"
   },
-  "author": "S0ura4",
-  "license": "MIT"
+  "author": "Sourav",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/S0ura4/convert2webp/issues"
+  },
+  "homepage": "https://github.com/S0ura4/convert2webp#readme"
 }
